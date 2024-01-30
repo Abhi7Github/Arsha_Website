@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+        <style>
+            body{
+            margin: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main{
+            background-color: rgba(40, 58, 90, 0.9);
+            height: 80px;
+            width: 100%;
+            position: fixed;
+        }
+        .h2h{
+          color: white;
+          float: left;
+          margin-left: 100px;
+          margin-top: 30px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        #ic{
+            font-size: 20px;
+        }
+        li{
+            display: inline-block;
+            padding: 15px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(234, 233, 238);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a:hover {
+            background-color: rgb(201, 197, 197) ;
+            color: black;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        input[type="button"]{
+            border: solid 2px;
+            border-radius: 20px;
+            width: 100px;
+            height: 30px;
+            color: white;
+            background-color:rgba(40, 58, 90, 0.9);
+            border-color: rgb(129, 190, 218) ;
+        }
+        input[type="button"]:hover{
+            background-color: rgb(15, 177, 226);
+            border: none;
+            cursor: pointer;
+        }
+        a{
+
+            color: white;
+            text-decoration: none;   
+        }
+        .key:hover{
+            color: rgb(15, 177, 226);
+        }
+        a:hover{
+            color: rgb(15, 177, 226);
+        }
+        nav{
+            margin-right: 100px;
+            float: right;
+        }
+
+        #h{
+            margin-top: 110px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        hr{
+            margin-top: -20px;
+            width: 140px;
+            height: 2px;
+            background-color: black;
+        }
+        p{
+            font-size: 20px;
+            padding: 0px;
+            text-align: center  ;
+        }
+
+        .navb{
+            margin-right: 30%
+        }
+        button{
+            border: none;
+            text-align: center;
+            width: 75px;
+            height: 40px;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+        button:hover{
+            background-color: rgb(15, 177, 226);
+            color: white;
+        }
+
+        .port{
+            margin-top: 125px;
+            margin-left: 120px;
+            width: 1260px;
+            height: 100vh;
+            position: static;
+        }
+        .img1{
+            background-image: url(/Practical-15mar/img/portfolio/portfolio-1.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 500px;
+            width: 400px;
+            overflow: hidden;
+            transition: 1s;
+        }
+        .img1:hover{
+            transform: scale(1.1);
+        }
+        .img1:hover .tagg{
+            display: block;
+            
+        }
+        .tagg{
+          /*  display: none;*/
+            color: white;
+            height: 68px;
+            margin-top: 339px;
+            background-color: rgba(55, 81, 126, 0.8);
+        }
+        #hhh{
+            margin-top: -5px;
+        }
+        #hh{
+            margin-top: -10px;
+        }
+        #content{
+            padding: 10px;
+        }
+        
+        .img2{
+            background-image: url(/Practical-15mar/img/portfolio/portfolio-2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 400px; 
+            height: 268px;
+            float: left;
+            margin-left: 430px;
+            margin-top: -500px;
+            transition: 1s;
+        }
+        .tagg2{
+          /*  display: none;*/
+            float: right;
+            color: white;
+            margin-top: 200px;
+            height: 68px;
+            width: 400px;
+            background-color: rgba(55, 81, 126, 0.8);
+        }
+        .img2:hover{
+            transform: scale(1.1);
+        }
+        .img3{
+            background-image: url(/Practical-15mar/img/portfolio/portfolio-3.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 500px;
+            width: 400px;
+            margin-left: 860px;
+            margin-top: -500px;
+            transition: 1s;
+        }
+        .img3:hover{
+            transform: scale(1.1);
+        }
+        .tagg3{
+          /*  display: none;*/
+            float: right;
+            color: white;
+            margin-top: -342px;
+            height: 68px;
+            width: 400px;
+            background-color: rgba(55, 81, 126, 0.8);
+        }
+        .img4{
+            background-image: url(/Practical-15mar/img/portfolio/portfolio-4.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 500px;
+            width: 400px;
+            margin-left: 860px;
+            margin-top: -245px;
+        }
+        .img4:hover{
+            transform: scale(1.1);
+        }
+        .tagg4{
+          /*  display: none;*/
+            float: right;
+            color: white;
+            margin-top: -50px;
+            height: 68px;
+            width: 400px;
+            background-color: rgba(55, 81, 126, 0.8);
+        }
+        .img5{
+            background-image: url(/Practical-15mar/img/portfolio/portfolio-5.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 600px;
+            width: 500px;
+            margin-left: 430px;
+            margin-top:  -455px;
+            transition: 1s;
+        }
+        .img5:hover{
+            transform: scale(1.1);
+        }
+        .tagg5{
+          /*  display: none;*/
+            float: left;
+            color: white;
+            margin-top: 332px;
+            height: 68px;
+            width: 400px;
+            background-color: rgba(55, 81, 126, 0.8);
+        }
+        .img6{
+            background-image: url(/Practical-15mar/img/portfolio/portfolio-6.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 600px;
+            width: 500px;
+            margin-top: -460px;
+            transition: 1s;
+        }
+        .img6:hover{
+            transform: scale(1.1);
+        }
+        .tagg6{
+          /*  display: none;*/
+            float: left;
+            color: white;
+            margin-top: 72px;
+            height: 68px;
+            width: 402px;
+            background-color: rgba(55, 81, 126, 0.8);
+        }
+        .img7{
+            background-image: url(/Practical-15mar/img/portfolio/portfolio-7.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 500px;
+            width: 400px;
+            margin-left: 860px;
+            margin-top: -490px;
+            transition: 1s;
+        }
+        .img7:hover{
+            transform: scale(1.1);
+        }
+        .tagg7{
+          /*  display: none;*/
+            float: right;
+            color: white;
+            margin-top: -158px;
+            height: 68px;
+            width: 400px;
+            background-color: rgba(55, 81, 126, 0.8);
+        }
+        .img8{
+            background-image: url(/Practical-15mar/img/portfolio/portfolio-8.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 500px;
+            width: 400px;
+            margin-left: 860px;
+            margin-top: -210px;
+            transition: 1s;
+        }
+        .img8:hover{
+            transform: scale(1.1);
+        }
+        .tagg8{
+          /*  display: none;*/
+            float: right;
+            color: white;
+            margin-top: 138px;
+            height: 68px;
+            width: 400px;
+            background-color: rgba(55, 81, 126, 0.8);
+        }
+        .img9{
+            background-image: url(/Practical-15mar/img/portfolio/portfolio-9.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 500px;
+            width: 400px;
+            margin-left: 430px;
+            margin-top:  -410px;
+            transition: 1s;
+        }
+        .img9:hover{
+            transform: scale(1.1);
+        }
+        .tagg9{
+          /*  display: none;*/
+            float: right;
+            color: white;
+            margin-top: 200px;
+            height: 68px;
+            width: 400px;
+            background-color: rgba(55, 81, 126, 0.8);
+        }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="main">
+        <h2 class="h2h">ARSHA</h2>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Servises.html">Services</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Team.html">Team</a></li>
+                <li class="dropdown">
+                    <a  class="dropbtn">Drop Down &nbsp;&nbsp;<i id="ic" class="fa-solid fa-angle-down"></i></i></a>
+                    <div class="dropdown-content">
+                      <a href="">Drop Down 1</a>
+                      <a href="">Drop Down 2</a>
+                      <a href="">Drop Down 3</a>
+                      <a href="">Drop Down 4</a>
+                    </div>
+                  </li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><input type="button" value="Get Started"</li>
+            </ul>
+        </nav>
+    </div><br><br>
+    <h1 id="h">PORTFOLIO</h1><hr>
+    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam 
+    <br>cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+     <div class="navb">
+        <nav>
+            <ul>
+                <li><button>All</button></li>
+                <li><button>App</button></li>
+                <li><button>Card</button></li>
+                <li><button>Web</button></li>
+            </ul>
+        </nav>
+     </div>   
+     <div class="port">
+        <div class="img1">
+           <div class="tagg">
+                <div id="content">
+                <h2 id="hhh">App 1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-plus"></i>&emsp;<i class="fa-solid fa-link"></i></h2>
+                <h5 id="hh">App</h5>
+                </div>
+           </div> 
+        </div>
+        <div class="img2">
+            <div class="tagg2">
+                <div id="content">
+                <h2 id="hhh">Web 1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-plus"></i>&emsp;<i class="fa-solid fa-link"></i></h2>
+                <h5 id="hh">Web</h5>
+                </div>
+           </div>
+        </div>
+        <div class="img3">
+            <div class="tagg3">
+                <div id="content">
+                <h2 id="hhh">App 1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-plus"></i>&emsp;<i class="fa-solid fa-link"></i></h2>
+                <h5 id="hh">App</h5>
+                </div>
+           </div> 
+        </div>
+        <div class="img4">
+            <div class="tagg4">
+                <div id="content">
+                <h2 id="hhh">Card 2&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-plus"></i>&emsp;<i class="fa-solid fa-link"></i></h2>
+                <h5 id="hh">Card</h5>
+                </div>
+           </div>
+        </div>
+        <div class="img5">
+            <div class="tagg5">
+                <div id="content">
+                <h2 id="hhh">Web 2&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-plus"></i>&emsp;<i class="fa-solid fa-link"></i></h2>
+                <h5 id="hh">Web</h5>
+                </div>
+           </div>
+        </div>
+        <div class="img6">
+            <div class="tagg6">
+                <div id="content">
+                <h2 id="hhh">App 3&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-plus"></i>&emsp;<i class="fa-solid fa-link"></i></h2>
+                <h5 id="hh">App</h5>
+                </div>
+           </div> 
+        </div>
+        <div class="img7">
+            <div class="tagg7">
+                <div id="content">
+                <h2 id="hhh">Card 1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-plus"></i>&emsp;<i class="fa-solid fa-link"></i></h2>
+                <h5 id="hh">Card</h5>
+                </div>
+            </div>
+        </div>
+        <div class="img8">
+            <div class="tagg8">
+                <div id="content">
+                <h2 id="hhh">Card 3&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-plus"></i>&emsp;<i class="fa-solid fa-link"></i></h2>
+                <h5 id="hh">Card</h5>
+                </div>
+           </div>
+        </div>
+        <div class="img9">
+            <div class="tagg9">
+                <div id="content">
+                <h2 id="hhh">Web 3&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-plus"></i>&emsp;<i class="fa-solid fa-link"></i></h2>
+                <h5 id="hh">Web</h5>
+                </div>
+           </div>
+        </div>
+     </div>
+</body>
+</html>

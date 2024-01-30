@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <style>
+        body{
+            margin: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main{
+            background-color: rgb(79, 72, 112);
+            height: 80px;
+            width: 100%;
+            position: fixed;
+        }
+        .h2h{   
+          color: white;
+          float: left;
+          margin-left: 100px;
+          margin-top: 30px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        #ic{
+            font-size: 20px;
+        }
+        li{
+            display: inline-block;
+            padding: 15px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(234, 233, 238);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a:hover {
+            background-color: rgb(201, 197, 197) ;
+            color: black;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        input[type="button"]{
+            border: solid 2px;
+            border-radius: 20px;
+            width: 100px;
+            height: 30px;
+            color: white;
+            background-color:rgb(79, 72, 112);
+            border-color: rgb(129, 190, 218) ;
+        }
+        input[type="button"]:hover{
+            background-color: rgb(15, 177, 226);
+            border: none;
+            cursor: pointer;
+        }
+        a{
+
+            color: white;
+            text-decoration: none;   
+        }
+        .key:hover{
+            color: rgb(15, 177, 226);
+        }
+        a:hover{
+            color: rgb(15, 177, 226);
+        }
+        nav{
+            margin-right: 100px;
+            float: right;
+        }
+
+        #h{
+            margin-top: 110px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .hrr{
+            margin-top: -20px;
+            width: 50px;
+            height: 2px;
+            margin-left: 725px;
+            background-color: black;
+        }
+        .pp{
+            font-size: 20px;
+            padding: 0px;
+            text-align: center  ;
+        }
+
+        .blockk{
+            width: 1260px;
+            height: 520px;
+            padding: 10px;
+            margin-left: 130px;
+        }
+        .onne{
+            width: 610px;
+            height: 240px;
+            background-color: #f3f5fa;
+            float: left;
+            box-shadow: 3px 3px 30px 10px rgb(197, 190, 190);
+        }
+        .onne:hover{
+            transform: translateY(-10px);
+        }
+        hr{
+            width: 100px;
+            margin-left: -1px;
+        }
+        #fh{
+            width: 160px;   
+            height: 160px;
+            margin-left: 30px;
+            background-color: blanchedalmond;
+            border-radius: 100px;
+            background-image: url(/Practical-15mar/img/team/team-1.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        #sh{
+            width: 370px;
+            height: 180px;
+            float: left;
+            margin-top: -160px;
+            margin-left: 220px;
+        }
+        #circles{
+            display: inline;
+            float: left;
+            margin-top: -40px;
+            margin-left: -60px;
+        }
+        #circles ul li i{
+            padding: 14px;
+        }
+        h3{
+            color: rgb(79, 72, 112);
+        }
+        #ic1{
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 20px;
+            color: rgb(79, 72, 112);
+            background-color: rgb(214, 212, 212);
+        }
+        #ic1:hover{
+            background-color: #47b2e4;
+        }
+        #ic2{
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        }
+        #ic3{
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        }
+        #ic4{
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        }
+
+        .twoo{
+            float: right;
+            width: 610px;
+            height: 240px;
+            background-color: #f3f5fa;
+            box-shadow: 3px 3px 30px 10px rgb(197, 190, 190);
+        }
+        .twoo:hover{
+            transform: translateY(-10px);
+        }
+        #fh2{
+            width: 160px;   
+            height: 160px;
+            margin-left: 30px;
+            background-color: blanchedalmond;
+            border-radius: 100px;
+            background-image: url(/Practical-15mar/img/team/team-2.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        #sh2{
+            width: 370px;
+            height: 180px;
+            float: left;
+            margin-top: -160px;
+            margin-left: 220px;
+        }
+        .three{
+            float: left;
+            width: 610px;
+            height: 240px; 
+            margin-top: 20px;
+            background-color: #f3f5fa;
+            box-shadow: 3px 3px 30px 10px rgb(197, 190, 190);
+        }
+        .three:hover{
+            transform: translateY(-10px);
+        }
+        #fh3{
+            width: 160px;   
+            height: 160px;
+            margin-left: 30px;
+            background-color: blanchedalmond;
+            border-radius: 100px;
+            background-image: url(/Practical-15mar/img/team/team-3.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        #sh3{
+            width: 370px;
+            height: 180px;
+            float: left;
+            margin-top: -160px;
+            margin-left: 220px;
+        }
+
+        .fourr{
+            float: right; 
+            width: 610px;
+            height: 240px;
+            margin-top: 20px    ;
+            background-color: #f3f5fa;
+            box-shadow: 3px 3px 30px 10px rgb(197, 190, 190);
+        }
+        .fourr:hover{
+            transform: translateY(-10px);
+        }
+        #fh4{
+            width: 160px;   
+            height: 160px;
+            margin-left: 30px;
+            background-color: blanchedalmond;
+            border-radius: 100px;
+            background-image: url(/Practical-15mar/img/team/team-4.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        #sh4{
+            width: 370px;
+            height: 180px;
+            float: right;
+            margin-top: -160px;
+            margin-left: 220px;
+        }
+    
+    </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="main">
+        <h2 class="h2h">ARSHA</h2>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Servises.html">Services</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Team.html">Team</a></li>
+                <li class="dropdown">
+                    <a  class="dropbtn">Drop Down &nbsp;&nbsp;<i id="ic" class="fa-solid fa-angle-down"></i></i></a>
+                    <div class="dropdown-content">
+                      <a href="">Drop Down 1</a>
+                      <a href="">Drop Down 2</a>
+                      <a href="">Drop Down 3</a>
+                      <a href="">Drop Down 4</a>
+                    </div>
+                  </li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><input type="button" value="Get Started"</li>
+            </ul>
+        </nav>
+        </div><br><br>
+        <h1 id="h">TEAM</h1><hr class="hrr">
+        <p class="pp">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam 
+        <br>cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p><br>
+        <div class="blockk">
+            <div class="onne">
+            <br><br>
+            <div id="fh">
+
+            </div>
+            <div id="sh">
+                <h3>Walter White</h3>
+                <p>
+                    Chief Executive Officer<br>
+                    <hr>
+                    Explicabo voluptatem mollitia et repellat<br>
+                    qui dolorum quasi
+                </p>
+                <div id="circles">
+                    <ul>
+                        <li><div id="ic1"><i class="fa-brands fa-twitter"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-facebook-f"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-instagram"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-linkedin-in"></i></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="twoo">
+            <br><br>
+            <div id="fh2">
+
+            </div>
+            <div id="sh2">
+                <h3>Sarah Jhonson</h3>
+                <p>
+                    Product Manager<br>
+                    <hr>
+                    Aut maiores voluptates amet et quis<br>
+                    praesentium qui senda para
+                </p>  
+                <div id="circles">
+                    <ul>
+                        <li><div id="ic1"><i class="fa-brands fa-twitter"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-facebook-f"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-instagram"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-linkedin-in"></i></div></li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+        <div class="three">
+            <br><br>
+            <div id="fh3">
+
+            </div>
+            <div id="sh3">
+                <h3>William Anderson</h3>
+                <p>
+                    CTO<br>
+                    <hr>
+                    Quisquam facilis cum velit laborum corrupti<br>
+                    fuga rerum quia
+                </p> 
+                <div id="circles">
+                    <ul>
+                        <li><div id="ic1"><i class="fa-brands fa-twitter"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-facebook-f"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-instagram"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-linkedin-in"></i></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fourr">
+            <br><br>
+            <div id="fh4">
+
+            </div>
+            <div id="sh4">
+                <h3>Amanda Jepson</h3>
+                <p>
+                    Accountant<br>
+                    <hr>
+                    Dolorum tempora officiis odit laborum officiis et<br>
+                    et accusamus
+                </p> 
+                <div id="circles">
+                    <ul>
+                        <li><div id="ic1"><i class="fa-brands fa-twitter"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-facebook-f"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-instagram"></i></div></li>
+                        <li><div id="ic1"><i class="fa-brands fa-linkedin-in"></i></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+</html>
